@@ -1,5 +1,3 @@
-//start
-clear; close; clc;
 
 a = input("Enter a matrix(A): ");
 disp(a, 'A=');
@@ -13,5 +11,4 @@ C=x(1,1);
 D=x(2,1);
 disp(C,'C=');
 disp(D,'D=');
-disp("the best line fit is b=C+Dt.")
-//end
+disp("best fit is b=C+Dt.")
