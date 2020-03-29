@@ -1,10 +1,7 @@
-clc
-funcprot(0)   //if variables are redefined do nothing
-format('v',10)
-A = input("Enter a matrix: ")
 
-function col_space(A)
-    
+funcprot(0)  
+format('v',10)
+A = input("Enter a matrix: ")    
     disp(A,"The given matrix is A = ")
     A(2,:) = A(2,:) - (A(2,1)/A(1,1))*A(1,:)
     A(3,:) = A(3,:) - (A(3,1)/A(1,1))*A(1,:)
@@ -24,5 +21,4 @@ function col_space(A)
             end
         end
     end
-        
-endfunction
+  
