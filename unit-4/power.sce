@@ -1,4 +1,3 @@
-clc;clear;close;
 n=3
 disp("Enter elements for matrix A")
 for i=1:n
@@ -11,12 +10,12 @@ disp(A,'The given Matrix is')
 u0=[1 1 1]';
 disp(u0,'The initial vector is ')
 v=A*u0;
-a=max(u0);
-disp(a,'First approximation to eigen value is');
-while abs(max(v)-a)>0.002
+p=max(u0);
+disp(p,'1st apprx to eigen value is');
+while abs(max(v)-p)>0.002
     disp(v,"current eigen vector is")
-    a=max(v);
-    disp(a,"current eigen value is")
+    p=max(v);
+    disp(p,"current eigen value is")
     u0=v/max(v);
     v=A*u0;
 end
