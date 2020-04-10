@@ -1,4 +1,4 @@
-clc;clear;close;
+
 n=3
 disp("Enter elements for matrix A")
 for i=1:n
@@ -7,20 +7,20 @@ for i=1:n
     end
 end
 
-lam=poly(0,'lam')
-lam=lam
-charMat=A-lam*eye(3,3)
+ld=poly(0,'ld')
+ld=ld
+charMat=A-ld*eye(3,3)
 disp(charMat,'The charateristic Matrix is')
-charPoly=poly(A,'lam')
+charPoly=poly(A,'ld')
 disp(charPoly,'The charateristic Polynomial is')
-lam=spec(A)
-disp(lam,'The eigen values of A are')
-function[x,lam]=eigenvectors(A)
+ld=spec(A)
+disp(ld,'The eigen values of A are')
+function[x,ld]=eigenvectors(A)
 [n,m]=size(A);
-lam=spec(A)';
+ld=spec(A)';
 x=[];
 for k=1:3
-    B=A-lam(k)*eye(3,3);
+    B=A-ld(k)*eye(3,3);
     C=B(1:n-1,1:n-1);
     b=-B(1:n-1,n);
     y=C\b;
@@ -30,6 +30,5 @@ for k=1:3
 end
 endfunction
 
-//get f('eigenvectors')
-[x,lam]=eigenvectors(A)
+[x,ld]=eigenvectors(A)
 disp(x,'The eigen vectors of A are');
